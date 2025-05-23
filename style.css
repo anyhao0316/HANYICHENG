@@ -1,0 +1,527 @@
+/* 
+ * 瀚艺诚工贸有限公司 - 高端整木定制
+ * 奢华风格CSS样式
+ */
+
+/* 字体导入 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* 基础样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0c0c0c; /* 主要黑色 */
+  --secondary-color: #1a1a1a; /* 次要黑色 */
+  --accent-color: #a67c00; /* 金色强调 */
+  --text-color: #ffffff; /* 文字白色 */
+  --text-secondary: #a0a0a0; /* 次要文字灰色 */
+  --transition: all 0.3s ease-in-out;
+  --spacing: 8rem;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+/* 排版设置 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  position: relative;
+  margin-bottom: 4rem;
+  letter-spacing: 0.1rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  width: 5rem;
+  height: 1px;
+  background-color: var(--accent-color);
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* 布局容器 */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: var(--spacing) 0;
+  position: relative;
+}
+
+/* 导航栏 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 2rem 4rem;
+  transition: var(--transition);
+  background-color: rgba(12, 12, 12, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 3.5rem;
+}
+
+.nav-links li a {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
+
+/* 汉堡菜单 */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-color);
+  margin: 5px;
+  transition: var(--transition);
+}
+
+/* 英雄区域 */
+.hero {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 70%;
+  padding-bottom: 10rem;
+}
+
+.hero h1 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  max-width: 60rem;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1.5rem 3rem;
+  border: 1px solid var(--accent-color);
+  color: var(--text-color);
+  background: transparent;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* 关于我们 */
+.about {
+  background-color: var(--secondary-color);
+}
+
+.about-content {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-img {
+  flex: 1;
+  position: relative;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--accent-color);
+}
+
+.about-img::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--accent-color);
+  z-index: -1;
+}
+
+/* 产品体系 */
+.products {
+  background-color: var(--primary-color);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.product-card {
+  background-color: var(--secondary-color);
+  padding: 3rem;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.product-card:hover {
+  border: 1px solid var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.product-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 设计理念 */
+.philosophy {
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.philosophy-content {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.philosophy h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 案例展示 */
+.cases {
+  background-color: var(--primary-color);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.case-item {
+  position: relative;
+  overflow: hidden;
+  height: 40rem;
+}
+
+.case-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.case-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  transition: var(--transition);
+}
+
+.case-item:hover .case-img {
+  transform: scale(1.05);
+}
+
+.case-item:hover .case-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+}
+
+/* 联系我们 */
+.contact {
+  background-color: var(--secondary-color);
+}
+
+.contact-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info p {
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--primary-color);
+  border: 1px solid var(--text-secondary);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+textarea.form-control {
+  min-height: 15rem;
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 页脚 */
+.footer {
+  background-color: var(--primary-color);
+  padding: 5rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer p {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+}
+
+/* 动画效果 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --spacing: 6rem;
+  }
+
+  .about-content,
+  .contact-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .about-img::before {
+    display: none;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .nav-links.active {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-bottom: 6rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --spacing: 4rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
